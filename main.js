@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let number2 = document.querySelector('.num2')
             questionNumber++
             console.log(questionNumber)
-            if(parseInt(e.target.value) == parseInt(number1.innerHTML)+parseInt(number2.innerHTML)){
+            if(parseInt(e.target.value) == eval(document.querySelector('.nums'))){
                 document.querySelector('.num1').innerHTML = Math.ceil(Math.random() * 20);                
                 document.querySelector('.num2').innerHTML = Math.ceil(Math.random() * 20);
 
