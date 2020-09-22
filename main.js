@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     console.log(inputAnswer)
 
+    let operands = document.querySelector('#operands')
+    operands.addEventListener('change', (e) => {
+        document.querySelector('.operand').innerHTML = e.target.value
+    })
    
     inputAnswer.addEventListener("keyup", (e) => {
         if(e.key === "Enter"){
