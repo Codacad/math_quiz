@@ -23,12 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if(e.key === "Enter"){
             let number1 = document.querySelector('.num1')
             let number2 = document.querySelector('.num2')
-            questionNumber++
-            console.log(questionNumber)
-            if(parseInt(e.target.value) == eval(document.querySelector('.nums'))){
+            questionNumber++                        
+            if(parseInt(e.target.value) == eval(document.querySelector('.nums').textContent)){
                 document.querySelector('.num1').innerHTML = Math.ceil(Math.random() * 20);                
                 document.querySelector('.num2').innerHTML = Math.ceil(Math.random() * 20);
-
+                
                 score = score + 1
                 document.querySelector('div.score span').innerHTML =  `Score: ${score}`   
 
