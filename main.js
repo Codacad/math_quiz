@@ -41,10 +41,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 scoreBar(`box-${questionNumber}`, "rgba(255,0,0,.4)")
             }      
 
+            function result(marks){
+                if(marks >= 7){
+                    return `
+                        <div class="result">
+                            <div class="emoji"><span>&#128517;</span></div>
+                            <p>You've passed...</p>
+                            <div>Congratulations, you scored <strong>${marks}</strong> of <strong>${10}.</strong></div>
+                        </div>
+                    `
+                }else{
+                    return `
+                        <div class="result">
+                            <div class="emoji"><span>&#128521;</span></div>
+                            <div>Oops, you failed, your score <strong>${marks}</strong> of <strong>${10}</strong> is less than 7. You must need at least score 7.</div>                            
+                            <p>Try again...</p>
+                        </div>
+                    `
+                }
+            }
+
             if(questionNumber == 10){
                 document.querySelector('div.quiz-contents').innerHTML = `
                     <div class="game-over">
                         <h1>Quiz Over</h1>
+                        ${result(score)}
                         <a href="/" class="restart">Restart Quiz</a>
                     </div>
                 `

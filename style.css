@@ -83,3 +83,11 @@ div.game-over a.restart{
     border-radius: 3px;
     color: rgba(0,0,0,.6);
 }
+
+.result{
+    font-size: 24px;
+}
+
+.result .emoji span{
+    font-size: 70px;
+}
