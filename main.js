@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let score = 0;
     let questionNumber = 0
 
-
-    document.querySelector('.num1').innerHTML = num1;
+    document.querySelector('.num1').innerHTML = num1;    
     document.querySelector('.num2').innerHTML = num2;
     document.querySelector('div.score span').innerHTML =  `Score: ${score}`
 
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             questionNumber++
             console.log(questionNumber)
             if(parseInt(e.target.value) == parseInt(number1.innerHTML)+parseInt(number2.innerHTML)){
-                document.querySelector('.num1').innerHTML = Math.ceil(Math.random() * 20);
+                document.querySelector('.num1').innerHTML = Math.ceil(Math.random() * 20);                
                 document.querySelector('.num2').innerHTML = Math.ceil(Math.random() * 20);
 
                 score = score + 1
